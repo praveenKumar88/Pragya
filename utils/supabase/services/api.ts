@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js';
 import { type ExtendedProduct } from '@/utils/supabase/CustomTypes';
 import { type InsertLog, type Log } from '@/utils/supabase/types';
 
