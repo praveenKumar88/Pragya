@@ -28,9 +28,9 @@ declare global {
 }
 
 const { title, description, ogImage } = {
-  title: 'Dev Hunt – The best new Dev Tools every day.',
-  description: 'A launchpad for dev tools, built by developers for developers, open source, and fair.',
-  ogImage: 'https://devhunt.org/devhuntog.png?v=2',
+  title: 'Pragya – Helping Creators Go FullTime faster.',
+  description: '',
+  ogImage: 'https://commons.wikimedia.org/wiki/File:Charaxes_brutus_natalensis.jpg',
 };
 
 export const metadata = {

@@ -9,21 +9,10 @@ export default () => {
       name: 'About',
     },
     // {
-    //   href: 'https://github.com/MarsX-dev/devhunt',
-    //   name: 'GitHub Repository',
+    //   href: 'https://x.com/PravKumar1988',
+    //   name: 'Contact',
     // },
-    {
-      href: '/blog',
-      name: 'Blog',
-    },
-    {
-      href: 'https://x.com/PravKumar1988',
-      name: 'Contact',
-    },
-    // { name: 'OSS Friends', href: '/oss-friends' },
-    // { name: 'NextJS Starter', href: 'https://nextjsstarter.com/?' },
-    // { name: 'Open Source Alternatives', href: 'https://osssoftware.org/' },
-    { name: 'Praveen Kumar (CEO)', href: 'https://www.linkedin.com/in/praveenkumar88/' },
+    { name: 'Praveen Kumar (Founder)', href: 'https://www.linkedin.com/in/praveenkumar88/' },
   ];
 
   // const usedTools = [
@@ -37,7 +26,7 @@ export default () => {
   // ];
 
   const builtBy = [
-    { title: '@praveenkumar', url: 'https://x.com/PravKumar1988' },
+    // { title: '@praveenkumar', url: 'https://x.com/PravKumar1988' },
     { title: 'see all', url: '/the-story' },
   ];
 
@@ -61,21 +50,7 @@ export default () => {
         </ul>
         <div className="mt-8 items-center justify-between sm:flex">
           <div className="mt-4 sm:mt-0">
-            &copy; 2023 Dev Hunt. Member of{' '}
-            <a className=" text-slate-100 hover:text-slate-50" href="https://www.marsx.dev/">
-              MarsX.Dev
-            </a>{' '}
-            family. <br />
-            {/*<div className="text-xs pt-2">*/}
-            {/*  Uses & Sponsored by {' '}*/}
-            {/*  {usedTools.map((t, i) => (*/}
-            {/*    <a className=" text-slate-200 hover:text-slate-50" href={t.url} rel="nofollow noopener noreferrer" target="_blank">*/}
-            {/*      {t.title}*/}
-            {/*      {usedTools.length - 1 === i ? '' : ', '}*/}
-            {/*    </a>*/}
-            {/*  ))}*/}
-            {/*  {'.'}*/}
-            {/*</div>*/}
+            &copy; 2023 Dev Hunt.
             <div className="text-xs pt-2">
               Built by{' '}
               {builtBy.map((t, i) => (
