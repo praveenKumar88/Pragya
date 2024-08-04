@@ -63,10 +63,10 @@ enable_confirmations = false
 # `twitter`, `slack`, `spotify`, `workos`, `zoom`.
 [auth.external.apple]
 enabled = false
-client_id = ""
-secret = ""
+client_id = "13748309255-18gqujks7o27l8ehobsm3gqbq3j9bme6.apps.googleusercontent.com"
+secret = "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"
 # Overrides the default auth redirectUrl.
-redirect_uri = ""
+redirect_uri = "https://zoaubybcjyhuxeuceucj.supabase.co/auth/v1/callback"
 # Overrides the default auth provider URL. Used to support self-hosted gitlab, single-tenant Azure,
 # or any other third-party OIDC providers.
 url = ""

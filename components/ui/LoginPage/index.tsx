@@ -27,7 +27,7 @@ export default () => {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: getURL(),
+        redirectTo: `https://zoaubybcjyhuxeuceucj.supabase.co/auth/v1/callback`,
       },
     });
   };
