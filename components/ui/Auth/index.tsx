@@ -26,7 +26,12 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
 
   const handleGoogleLogin = async () => {
     setGoogleAuthLoad(true);
-    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `https://zoaubybcjyhuxeuceucj.supabase.co/auth/v1/callback`,
+      },
+    });
     if (error != null) {
       console.log({ error });
     }
