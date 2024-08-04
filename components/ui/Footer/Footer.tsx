@@ -8,25 +8,10 @@ export default () => {
       href: '/the-story',
       name: 'About',
     },
-    // {
-    //   href: 'https://x.com/PravKumar1988',
-    //   name: 'Contact',
-    // },
     { name: 'Praveen Kumar (Founder)', href: 'https://www.linkedin.com/in/praveenkumar88/' },
   ];
 
-  // const usedTools = [
-  //   { title: 'FloatUI', url: 'https://www.floatui.com/' },
-  //   { title: 'Sensorpro', url: 'https://sensorpro.eu/' },
-  //   { title: 'CountVisits', url: 'http://countvisits.com/' },
-  //   { title: 'SEObotAI', url: 'https://seobotai.com/' },
-  //   { title: 'ListingBott', url: 'https://listingbott.com/' },
-  //   { title: 'IndexRusher', url: 'https://indexrusher.com/' },
-  //   { title: 'UnicornPlatform', url: 'https://unicornplatform.com/' },
-  // ];
-
   const builtBy = [
-    // { title: '@praveenkumar', url: 'https://x.com/PravKumar1988' },
     { title: 'see all', url: '/the-story' },
   ];
 
