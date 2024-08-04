@@ -3,24 +3,11 @@
 import { useSupabase } from '@/components/supabase/provider';
 import Brand from '@/components/ui/Brand';
 import { useState } from 'react';
-import { GithubProvider, GoogleProvider } from '../AuthProviderButtons';
-
-const getURL = () => {
-  let url =
-    process?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
-    process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
-    'http://localhost:3000/';
-  // Make sure to include `https://` when not localhost.
-  url = url.includes('http') ? url : `https://${url}`;
-  // Make sure to including trailing `/`.
-  url = url.charAt(url.length - 1) === '/' ? url : `${url}/`;
-  return url;
-};
+import { GoogleProvider } from '../AuthProviderButtons';
 
 export default () => {
   const { supabase } = useSupabase();
   const [isGoogleAuthLoad, setGoogleAuthLoad] = useState<boolean>(false);
-  const [isGithubAuthLoad, setGithubAuthLoad] = useState<boolean>(false);
 
   const handleGoogleLogin = async () => {
     setGoogleAuthLoad(true);
@@ -28,16 +15,6 @@ export default () => {
       provider: 'google',
       options: {
         redirectTo: `https://zoaubybcjyhuxeuceucj.supabase.co/auth/v1/callback`,
-      },
-    });
-  };
-
-  const handleGithubLogin = async () => {
-    setGithubAuthLoad(true);
-    await supabase.auth.signInWithOAuth({
-      provider: 'github',
-      options: {
-        redirectTo: getURL(),
       },
     });
   };
@@ -52,7 +29,6 @@ export default () => {
             <p className="text-slate-300 whitespace-pre-wrap mb-2">We use GitHub, and Google provider to filter out bots and fakes.</p>
             <p className="text-slate-300 whitespace-pre-wrap"><a className="text-orange-500 whitespace-pre-wrap" href="/the-story">Read the Rules </a>for voting and what dev tools you can submit here</p>
           </div>
-          <GithubProvider isLoad={isGithubAuthLoad} onClick={handleGithubLogin} />
           <GoogleProvider isLoad={isGoogleAuthLoad} onClick={handleGoogleLogin} />
         </div>
       </div>
