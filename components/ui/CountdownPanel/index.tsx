@@ -97,14 +97,6 @@ export default () => {
           <RenderCountdown />
         </div>
         <div className="max-w-lg mt-2 text-slate-400">
-          {/*100k+ developers found Dev Tools here.*/}
-          {/*<div className="inline mt-2 sm:block">*/}
-          {/*  See how  {' '}*/}
-          {/*  <a className="underline transition-opacity hover:text-scale-1200" href="https://twitter.com/johnrushx/status/1661534492949872641">*/}
-          {/*  it started*/}
-          {/*  </a>*/}
-          {/*  .*/}
-          {/*</div>*/}
 
           <div className="mt-3 sm:block border border-orange-500 bg-slate-900 rounded-md p-3 pt-2 border-dasheds">
             <span className='text-xs mb-2 block text-slate-600'>sponsor</span>

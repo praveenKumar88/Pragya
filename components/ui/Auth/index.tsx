@@ -8,20 +8,17 @@ import { usermaven } from '@/utils/usermaven';
 import Button from '@/components/ui/Button';
 import Modal from '@/components/ui/Modal';
 import Brand from '@/components/ui/Brand';
-import { GithubProvider, GoogleProvider } from '../AuthProviderButtons';
+import { GoogleProvider } from '../AuthProviderButtons';
 import ProfileService from '@/utils/supabase/services/profile';
 import { createBrowserClient } from '@/utils/supabase/browser';
 import { useRouter } from 'next/navigation';
-import sendWelcomeEmail from '@/utils/sendWelcomeEmail';
 // Supabase auth needs to be triggered client-side
 
 export default function Auth({ onLogout }: { onLogout?: () => void }) {
   const { supabase, session, user } = useSupabase();
   const [isGoogleAuthLoad, setGoogleAuthLoad] = useState<boolean>(false);
   const [isModalActive, setModalActive] = useState<boolean>(false);
-
-  const router = useRouter();
-
+  useRouter();
   const profile = new ProfileService(createBrowserClient());
 
   const handleGoogleLogin = async () => {
@@ -47,7 +44,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
             const DISCORD_USER_WEBHOOK = process.env.DISCORD_USER_WEBHOOK as string;
             const content = `**${user?.full_name}** [open the profile](https://devhunt.org/@${user?.username})`;
             if (DISCORD_USER_WEBHOOK) await axios.post(DISCORD_USER_WEBHOOK, { content });
-            
+
             await usermaven.id({
               id: user?.id,
               email: session?.user?.email,
