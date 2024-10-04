@@ -119,7 +119,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <ChatWindow />
           <SupabaseProvider user={profile as Profile} session={session}>
             <SupabaseListener serverAccessToken={session?.access_token} />
-            <ProfileFormModal isModalOpen={user ? (profileNoCache?.social_url == null ? true : false) : false} />
             <Banner />
             <Navbar />
             <ModalBannerCodeClient />

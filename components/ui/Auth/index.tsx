@@ -48,7 +48,6 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
             const content = `**${user?.full_name}** [open the profile](https://devhunt.org/@${user?.username})`;
             if (DISCORD_USER_WEBHOOK) await axios.post(DISCORD_USER_WEBHOOK, { content });
             
-            await axios.post('/api/login', { firstName: user?.full_name as string, personalEMail: session.user.email as string });
             await usermaven.id({
               id: user?.id,
               email: session?.user?.email,
